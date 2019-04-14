@@ -1,0 +1,1411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="envTeste">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="tpAmb" minOccurs="1" maxOccurs="1">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:int">
+              <xsd:totalDigits value="1" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="idLote" minOccurs="1" maxOccurs="1">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:pattern value="^\d{1,15}$"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="optTeste" minOccurs="1" maxOccurs="1">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:int">
+              <xsd:totalDigits value="1" />
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="cUF" minOccurs="1" maxOccurs="1">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:pattern value="^\d{2}$"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="CFe" minOccurs="1" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <!--Grupo A-->
+              <xsd:element name="infCFe" minOccurs="1" maxOccurs="1">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <!--Grupo B-->
+                    <xsd:element name="ide" minOccurs="1" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="cUF" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{2}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="cNF" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{6}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="mod" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:length value="2"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="nserieSAT" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{9}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="nCFe" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value = "^\d{6}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="dEmi" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{8}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="hEmi" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{6}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="cDV" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="tpAmb" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="CNPJ" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{14}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="signAC" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="1"/>
+                                <xsd:maxLength value="344"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="assinaturaQRCODE" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:length value="344"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="numeroCaixa" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{3}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <!--Grupo C-->
+                    <xsd:element name="emit" minOccurs="1" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="CNPJ" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{14}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="xNome" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="1"/>
+                                <xsd:maxLength value="60"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="xFant" minOccurs="0" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="1"/>
+                                <xsd:maxLength value="60"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="enderEmit" minOccurs="1" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="xLgr" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:minLength value="2"/>
+                                      <xsd:maxLength value="60"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="nro" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:minLength value="1"/>
+                                      <xsd:maxLength value="60"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="xCpl" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:minLength value="1"/>
+                                      <xsd:maxLength value="60"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="xBairro" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:minLength value="2"/>
+                                      <xsd:maxLength value="60"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="xMun" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:minLength value="2"/>
+                                      <xsd:maxLength value="60"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="CEP" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{8}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="IE" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:length value="12"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="IM" minOccurs="0" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="1"/>
+                                <xsd:maxLength value="15"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="cRegTrib" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="cRegTribISSQN" minOccurs="0" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{1}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="indRatISSQN" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:length value="1"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <!--Grupo E-->
+                    <xsd:element name="dest" minOccurs="1" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:choice>
+                            <xsd:element name="CNPJ" minOccurs="0" maxOccurs="1">
+                              <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                  <xsd:pattern value="^\d{14}$"/>
+                                </xsd:restriction>
+                              </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="CPF" minOccurs="0" maxOccurs="1">
+                              <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                  <xsd:pattern value="^\d{0}$|^\d{11}$"/>
+                                </xsd:restriction>
+                              </xsd:simpleType>
+                            </xsd:element>
+                          </xsd:choice>
+                          <xsd:element name="xNome" minOccurs="0" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="0"/>
+                                <xsd:maxLength value="60" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <!--Grupo G-->
+                    <xsd:element name="entrega" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="xLgr" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="2"/>
+                                <xsd:maxLength value="60" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="nro" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="1"/>
+                                <xsd:maxLength value="60" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="xCpl" minOccurs="0" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="1"/>
+                                <xsd:maxLength value="60" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="xBairro" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="1"/>
+                                <xsd:maxLength value="60" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="xMun" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="2"/>
+                                <xsd:maxLength value="60" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="UF" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:length value="2" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <!--Grupo H-->
+                    <xsd:element name="det" minOccurs="1" maxOccurs="500">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="prod" minOccurs="1" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="cProd" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:minLength value="1"/>
+                                      <xsd:maxLength value="60"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="cEAN" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^.{8}$|^.{12}$|^.{13}$|^.{14}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="xProd" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:minLength value="1"/>
+                                      <xsd:maxLength value="120"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="NCM" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^.{2}$|^.{8}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="CFOP" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{4}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="uCom" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:minLength value="1"/>
+                                      <xsd:maxLength value="6"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="qCom" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,11}[.]{1}[0-9]{4}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vUnCom" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,12}[.]{1}[0-9]{3}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vProd" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="indRegra" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:length value="1"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vDesc" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vOutro" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vItem" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vRatDesc" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vRatAcr" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="obsFiscoDet" minOccurs="0" maxOccurs="10">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="xTextoDet" minOccurs="1" maxOccurs="1">
+                                        <xsd:simpleType>
+                                          <xsd:restriction base="xsd:string">
+                                            <xsd:minLength value="1"/>
+                                            <xsd:maxLength value="60"/>
+                                          </xsd:restriction>
+                                        </xsd:simpleType>
+                                      </xsd:element>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="xCampoDet" use="required" >
+                                      <xsd:simpleType>
+                                        <xsd:restriction base="xsd:string">
+                                          <xsd:minLength value="1"/>
+                                          <xsd:maxLength value="20"/>
+                                        </xsd:restriction>
+                                      </xsd:simpleType>
+                                    </xsd:attribute>
+                                  </xsd:complexType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <!--Grupo M-->
+                          <xsd:element name="imposto" minOccurs="1" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="vItem12741" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:choice minOccurs="1" maxOccurs="1">
+                                  <!--Grupo N-->
+                                  <xsd:element name="ICMS">
+                                    <xsd:complexType>
+                                      <xsd:choice>
+                                        <xsd:element name="ICMS00" minOccurs="0" maxOccurs="1">
+                                          <xsd:complexType>
+                                            <xsd:sequence>
+                                              <xsd:element name="Orig" minOccurs="1" maxOccurs="1">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                              <xsd:element name="CST" minOccurs="1" maxOccurs="1">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d{2}$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                              <xsd:element name="pICMS" minOccurs="1" maxOccurs="1">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                              <xsd:element name="vICMS" minOccurs="1" maxOccurs="1">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                            </xsd:sequence>
+                                          </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="ICMS40" minOccurs="0" maxOccurs="1">
+                                          <xsd:complexType>
+                                            <xsd:sequence>
+                                              <xsd:element name="Orig" minOccurs="1" maxOccurs="1">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                              <xsd:element name="CST" minOccurs="1" maxOccurs="1">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d{2}$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                            </xsd:sequence>
+                                          </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="ICMSSN102" minOccurs="0" maxOccurs="1">
+                                          <xsd:complexType>
+                                            <xsd:sequence>
+                                              <xsd:element name="Orig" minOccurs="1" maxOccurs="1" >
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                              <xsd:element name="CSOSN" minOccurs="1" maxOccurs="1">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d{3}$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                            </xsd:sequence>
+                                          </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="ICMSSN900" minOccurs="0" maxOccurs="1">
+                                          <xsd:complexType>
+                                            <xsd:sequence>
+                                              <xsd:element name="Orig" minOccurs="1" maxOccurs="1">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                              <xsd:element name="CSOSN" minOccurs="1" maxOccurs="1">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d{3}$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                              <xsd:element name="pICMS" minOccurs="1" maxOccurs="1">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d{1,3}[.]{1}[0-9]{2}$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                              <xsd:element name="vICMS" minOccurs="1" maxOccurs="1">
+                                                <xsd:simpleType>
+                                                  <xsd:restriction base="xsd:string">
+                                                    <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                  </xsd:restriction>
+                                                </xsd:simpleType>
+                                              </xsd:element>
+                                            </xsd:sequence>
+                                          </xsd:complexType>
+                                        </xsd:element>
+                                      </xsd:choice>
+                                    </xsd:complexType>
+                                  </xsd:element>
+                                  <!--Grupo U-->
+                                  <xsd:element name="ISSQN">
+                                    <xsd:complexType>
+                                      <xsd:sequence>
+                                        <xsd:element name="vDeducISSQN" minOccurs="0" maxOccurs="1">
+                                          <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                              <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                            </xsd:restriction>
+                                          </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="vBC" minOccurs="1" maxOccurs="1">
+                                          <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                              <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                            </xsd:restriction>
+                                          </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="vAliq" minOccurs="0" maxOccurs="1">
+                                          <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                              <xsd:pattern value="^\d{3}[.]{1}[0-9]{2}$"/>
+                                            </xsd:restriction>
+                                          </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="vISSQN" minOccurs="0" maxOccurs="1">
+                                          <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                              <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                            </xsd:restriction>
+                                          </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="cMunFG" minOccurs="0" maxOccurs="1">
+                                          <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                              <xsd:pattern value="^\d{7}$"/>
+                                            </xsd:restriction>
+                                          </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="cListServ" minOccurs="0" maxOccurs="1">
+                                          <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                              <xsd:length value="5"/>
+                                            </xsd:restriction>
+                                          </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="cServTribMun" minOccurs="0" maxOccurs="1">
+                                          <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                              <xsd:length value="20"/>
+                                            </xsd:restriction>
+                                          </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="cNatOp" minOccurs="1" maxOccurs="1">
+                                          <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                              <xsd:pattern value="^\d{2}$"/>
+                                            </xsd:restriction>
+                                          </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="indIncFisc" minOccurs="1" maxOccurs="1">
+                                          <xsd:simpleType>
+                                            <xsd:restriction base="xsd:string">
+                                              <xsd:pattern value="^\d*[1-2]$"/>
+                                            </xsd:restriction>
+                                          </xsd:simpleType>
+                                        </xsd:element>
+                                      </xsd:sequence>
+                                    </xsd:complexType>
+                                  </xsd:element>
+                                </xsd:choice>
+                                <!--Grupo Q-->
+                                <xsd:element name="PIS" minOccurs="1" maxOccurs="1">
+                                  <xsd:complexType>
+                                    <xsd:choice>
+                                      <xsd:element name="PISAliq" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="CST" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="vBC" minOccurs="0" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="pPIS" minOccurs="0" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1}\.\d{1,4}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="vPIS" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="PISQtde" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="CST" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="qBCProd" minOccurs="0" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,12}[.]{1}[0-9]{4}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="vAliqProd" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,11}[.]{1}[0-9]{4}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="vPIS" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="PISNT" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="CST" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="PISSN" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="CST" minOccurs="1" maxOccurs="1" >
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="PISOutr" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="CST" minOccurs="1" maxOccurs="1" >
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{2}"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:choice minOccurs="1" maxOccurs="1">
+                                              <xsd:choice minOccurs="2" maxOccurs="2">
+                                                <xsd:element name="vBC" minOccurs="0" maxOccurs="1" >
+                                                  <xsd:simpleType>
+                                                    <xsd:restriction base="xsd:string">
+                                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                    </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                </xsd:element>
+                                                <xsd:element name="pPIS" minOccurs="0" maxOccurs="1" >
+                                                  <xsd:simpleType>
+                                                    <xsd:restriction base="xsd:string">
+                                                      <xsd:pattern value="^\d{1}[.]{1}[0-9]{4}$"/>
+                                                    </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                </xsd:element>
+                                              </xsd:choice>
+                                              <xsd:choice minOccurs="2" maxOccurs="2">
+                                                <xsd:element name="qBCProd" minOccurs="0" maxOccurs="1">
+                                                  <xsd:simpleType>
+                                                    <xsd:restriction base="xsd:string">
+                                                      <xsd:pattern value="^\d{1,12}[.]{1}[0-9]{4}$"/>
+                                                    </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                </xsd:element>
+                                                <xsd:element name="vAliqProd" minOccurs="0" maxOccurs="1">
+                                                  <xsd:simpleType>
+                                                    <xsd:restriction base="xsd:string">
+                                                      <xsd:pattern value="^\d{1,11}[.]{1}[0-9]{4}$"/>
+                                                    </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                </xsd:element>
+                                              </xsd:choice>
+                                            </xsd:choice>
+                                            <xsd:element name="vPIS" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                    </xsd:choice>
+                                  </xsd:complexType>
+                                </xsd:element>
+                                <!--Grupo R-->
+                                <xsd:element name="PISST" minOccurs="0" maxOccurs="1">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:choice minOccurs="1" maxOccurs="1">
+                                        <xsd:choice minOccurs="2" maxOccurs="2">
+                                          <xsd:element name="vBC" minOccurs="0" maxOccurs="1" >
+                                            <xsd:simpleType>
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                          <xsd:element name="pPIS" minOccurs="0" maxOccurs="1" >
+                                            <xsd:simpleType>
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:pattern value="^\d{1}[.]{1}[0-9]{4}$"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                        </xsd:choice>
+                                        <xsd:choice minOccurs="2" maxOccurs="2">
+                                          <xsd:element name="qBCProd" minOccurs="0" maxOccurs="1" >
+                                            <xsd:simpleType>
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:pattern value="^\d{1,12}[.]{1}[0-9]{4}$"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                          <xsd:element name="vAliqProd" minOccurs="0" maxOccurs="1" >
+                                            <xsd:simpleType>
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:pattern value="^\d{1,11}[.]{1}[0-9]{4}$"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                        </xsd:choice>
+                                      </xsd:choice>
+                                      <xsd:element name="vPIS" minOccurs="1" maxOccurs="1">
+                                        <xsd:simpleType>
+                                          <xsd:restriction base="xsd:string">
+                                            <xsd:pattern value="^\d{1,13}\.\d{1,2}$"/>
+                                          </xsd:restriction>
+                                        </xsd:simpleType>
+                                      </xsd:element>
+                                    </xsd:sequence>
+                                  </xsd:complexType>
+                                </xsd:element>
+                                <!--Grupo S-->
+                                <xsd:element name="COFINS" minOccurs="1" maxOccurs="1">
+                                  <xsd:complexType>
+                                    <xsd:choice>
+                                      <xsd:element name="COFINSAliq" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="CST" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="vBC" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="pCOFINS" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1}[.]{1}[0-9]{4}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="vCOFINS" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="COFINSQtde" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="CST" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="qBCProd" minOccurs="1" maxOccurs="1" >
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,12}[.]{1}[0-9]{4}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="vAliqProd" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,11}[.]{1}[0-9]{4}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:element name="vCOFINS" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="COFINSNT" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="CST" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="COFINSSN" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="CST" minOccurs="1" maxOccurs="1" >
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="COFINSOutr" minOccurs="0" maxOccurs="1">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="CST" minOccurs="1" maxOccurs="1" >
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                            <xsd:choice minOccurs="1" maxOccurs="1">
+                                              <xsd:choice minOccurs="2" maxOccurs="2">
+                                                <xsd:element name="vBC" minOccurs="0" maxOccurs="1">
+                                                  <xsd:simpleType>
+                                                    <xsd:restriction base="xsd:string">
+                                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                    </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                </xsd:element>
+                                                <xsd:element name="pCOFINS" minOccurs="0" maxOccurs="1">
+                                                  <xsd:simpleType>
+                                                    <xsd:restriction base="xsd:string">
+                                                      <xsd:pattern value="^\d{1}[.]{1}[0-9]{4}$"/>
+                                                    </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                </xsd:element>
+                                              </xsd:choice>
+                                              <xsd:choice minOccurs="2" maxOccurs="2">
+                                                <xsd:element name="qBCProd" minOccurs="0" maxOccurs="1">
+                                                  <xsd:simpleType>
+                                                    <xsd:restriction base="xsd:string">
+                                                      <xsd:pattern value="^\d{1,12}[.]{1}[0-9]{4}$"/>
+                                                    </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                </xsd:element>
+                                                <xsd:element name="vAliqProd" minOccurs="0" maxOccurs="1">
+                                                  <xsd:simpleType>
+                                                    <xsd:restriction base="xsd:string">
+                                                      <xsd:pattern value="^\d{1,11}[.]{1}[0-9]{4}$"/>
+                                                    </xsd:restriction>
+                                                  </xsd:simpleType>
+                                                </xsd:element>
+                                              </xsd:choice>
+                                            </xsd:choice>
+                                            <xsd:element name="vCOFINS" minOccurs="1" maxOccurs="1">
+                                              <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                  <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                                </xsd:restriction>
+                                              </xsd:simpleType>
+                                            </xsd:element>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                    </xsd:choice>
+                                  </xsd:complexType>
+                                </xsd:element>
+                                <!--Grupo T-->
+                                <xsd:element name="COFINSST" minOccurs="0" maxOccurs="1">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:choice minOccurs="1" maxOccurs="1">
+                                        <xsd:choice minOccurs="2" maxOccurs="2">
+                                          <xsd:element name="vBC" minOccurs="0" maxOccurs="1">
+                                            <xsd:simpleType>
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                          <xsd:element name="pCOFINS" minOccurs="0" maxOccurs="1">
+                                            <xsd:simpleType>
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:pattern value="^\d{1}[.]{1}[0-9]{4}$"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                        </xsd:choice>
+                                        <xsd:choice minOccurs="2" maxOccurs="2">
+                                          <xsd:element name="qBCProd" minOccurs="0" maxOccurs="1">
+                                            <xsd:simpleType>
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:pattern value="^\d{1,12}[.]{1}[0-9]{4}$"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                          <xsd:element name="vAliqProd" minOccurs="0" maxOccurs="1">
+                                            <xsd:simpleType>
+                                              <xsd:restriction base="xsd:string">
+                                                <xsd:pattern value="^\d{1,11}[.]{1}[0-9]{4}$"/>
+                                              </xsd:restriction>
+                                            </xsd:simpleType>
+                                          </xsd:element>
+                                        </xsd:choice>
+                                      </xsd:choice>
+                                      <xsd:element name="vCOFINS" minOccurs="1" maxOccurs="1">
+                                        <xsd:simpleType>
+                                          <xsd:restriction base="xsd:string">
+                                            <xsd:pattern value="^\d{2,13}[.]{1}[0-9]{2}$"/>
+                                          </xsd:restriction>
+                                        </xsd:simpleType>
+                                      </xsd:element>
+                                    </xsd:sequence>
+                                  </xsd:complexType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <!--Grupo V-->
+                          <xsd:element name="infAdProd" minOccurs="0" maxOccurs="1" >
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="1"/>
+                                <xsd:maxLength value="500"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="nItem" use="required">
+                          <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                              <xsd:pattern value="^\d{1,3}$"/>
+                            </xsd:restriction>
+                          </xsd:simpleType>
+                        </xsd:attribute>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <!--Grupo W-->
+                    <xsd:element name="total" minOccurs="1" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="ICMSTot" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="vICMS" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vProd" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vDesc" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vPIS" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vCOFINS" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vPISST" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vCOFINSST" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vOutro" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="vCFe" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="ISSQNtot" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="vBC" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vISS" minOccurs="1" maxOccurs="1" >
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vPIS" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vCOFINS" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vPISST" minOccurs="1" maxOccurs="1" >
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vCOFINSST" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="DescAcrEntr" minOccurs="0" maxOccurs="1">
+                            <xsd:complexType>
+                              <xsd:choice>
+                                <xsd:element name="vDescSubtot" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vAcresSubtot" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                              </xsd:choice>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="vCFeLei12741" minOccurs="0" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <!--Grupo WA-->
+                    <xsd:element name="pgto" minOccurs="1" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="MP" minOccurs="1" maxOccurs="10">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="cMP" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="vMP" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                                <xsd:element name="cAdmC" minOccurs="0" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:pattern value="^\d{3}$"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="vTroco" minOccurs="1" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:pattern value="^\d{1,13}[.]{1}[0-9]{2}$"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <!--Grupo Z-->
+                    <xsd:element name="infAdic" minOccurs="0" maxOccurs="1">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="infCpl" minOccurs="0" maxOccurs="1">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:minLength value="1"/>
+                                <xsd:maxLength value="5000" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="obsFisco" minOccurs="0" maxOccurs="10">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="xTexto" minOccurs="1" maxOccurs="1">
+                                  <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:minLength value="1"/>
+                                      <xsd:maxLength value="60"/>
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                              </xsd:sequence>
+                              <xsd:attribute name="xCampo" use="required">
+                                <xsd:simpleType>
+                                  <xsd:restriction base="xsd:string">
+                                    <xsd:minLength value="1"/>
+                                    <xsd:maxLength value="20"/>
+                                  </xsd:restriction>
+                                </xsd:simpleType>
+                              </xsd:attribute>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+
+                  </xsd:sequence>
+                  <xsd:attribute name="versao" use="required">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="^\d{1,2}[.]{1}[0-9]{2}$"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:attribute>
+                  <xsd:attribute name="versaoDadosEnt" use="required">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="^\d{1,2}[.]{1}[0-9]{2}$"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:attribute>
+                  <xsd:attribute name="versaoSB" use="required">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:pattern value="^\d{6}$"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:attribute>
+                  <xsd:attribute name="Id" use="required">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:length value="47"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:attribute>
+                </xsd:complexType>
+              </xsd:element>
+              <!-- Signature -->
+              <xsd:any namespace='http://www.w3.org/2000/09/xmldsig#'
+               minOccurs='1' maxOccurs='1'
+               processContents='lax'/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="nSeg" minOccurs="1" maxOccurs="1">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:minLength value="1"/>
+              <xsd:maxLength value="344"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="dhEnvio" minOccurs="1" maxOccurs="1">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:pattern value="^\d{14}$"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+        <xsd:element name="nserieSAT" minOccurs="1" maxOccurs="1">
+          <xsd:simpleType>
+            <xsd:restriction base="xsd:string">
+              <xsd:pattern value="^\d{9}$"/>
+            </xsd:restriction>
+          </xsd:simpleType>
+        </xsd:element>
+      </xsd:sequence>
+      <xsd:attribute name="versao" use="required">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:pattern value="^\d{1,2}\.\d{1,2}$"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:attribute>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="danfeNfce" pageWidth="302" pageHeight="800" columnWidth="286" leftMargin="8" rightMargin="8" topMargin="20" bottomMargin="0" isIgnorePagination="true" uuid="43e8f7d9-a4a8-4ac1-b35c-59d8ae725204">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="109"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ENDERECO_SEFAZ" class="java.lang.String"/>
+	<parameter name="QR_CODE" class="java.awt.Image"/>
+	<queryString language="xPath">
+		<![CDATA[/CFe/infCFe/det]]>
+	</queryString>
+	<field name="xFant" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/emit/xFant]]></fieldDescription>
+	</field>
+	<field name="xNome" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/emit/xNome]]></fieldDescription>
+	</field>
+	<field name="xLgr" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/emit/enderEmit/xLgr]]></fieldDescription>
+	</field>
+	<field name="nro" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/emit/enderEmit/nro]]></fieldDescription>
+	</field>
+	<field name="xMun" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/emit/enderEmit/xMun]]></fieldDescription>
+	</field>
+	<field name="CNPJ" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/emit/CNPJ]]></fieldDescription>
+	</field>
+	<field name="IE" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/emit/IE]]></fieldDescription>
+	</field>
+	<field name="IM" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/emit/IM]]></fieldDescription>
+	</field>
+	<field name="xBairro" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/emit/enderEmit/xBairro]]></fieldDescription>
+	</field>
+	<field name="nserieSAT" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/ide/nserieSAT]]></fieldDescription>
+	</field>
+	<field name="dEmi" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/ide/dEmi]]></fieldDescription>
+	</field>
+	<field name="hEmi" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/ide/hEmi]]></fieldDescription>
+	</field>
+	<field name="Id" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/@Id]]></fieldDescription>
+	</field>
+	<field name="nCFe" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/ide/nCFe]]></fieldDescription>
+	</field>
+	<field name="CPF" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/dest/CPF]]></fieldDescription>
+	</field>
+	<field name="xNome2" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/dest/xNome]]></fieldDescription>
+	</field>
+	<field name="nItem" class="java.lang.String">
+		<fieldDescription><![CDATA[@nItem]]></fieldDescription>
+	</field>
+	<field name="cProd" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/cProd]]></fieldDescription>
+	</field>
+	<field name="xProd" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/xProd]]></fieldDescription>
+	</field>
+	<field name="qCom" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/qCom]]></fieldDescription>
+	</field>
+	<field name="uCom" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/uCom]]></fieldDescription>
+	</field>
+	<field name="vUnCom" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/vUnCom]]></fieldDescription>
+	</field>
+	<field name="vItem" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/vItem]]></fieldDescription>
+	</field>
+	<field name="vProd" class="java.lang.String">
+		<fieldDescription><![CDATA[prod/vProd]]></fieldDescription>
+	</field>
+	<field name="vItem12741" class="java.lang.String">
+		<fieldDescription><![CDATA[imposto/vItem12741]]></fieldDescription>
+	</field>
+	<field name="vCFe" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/total/vCFe]]></fieldDescription>
+	</field>
+	<field name="infCpl" class="java.lang.String">
+		<fieldDescription><![CDATA[/CFe/infCFe/infAdic/infCpl]]></fieldDescription>
+	</field>
+	<variable name="TOTAL_ITENS" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[Double.valueOf($F{qCom})]]></variableExpression>
+	</variable>
+	<title>
+		<band height="72" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="286" height="10" uuid="a74bdaf5-df36-457e-915f-27347bcbf72a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{xFant}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="10" width="286" height="10" uuid="efbe58b5-c163-41b7-bdad-14f10309f24e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{xNome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="20" width="286" height="10" uuid="8c8898fc-cecb-4cc3-bf1a-885d8066d68d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{xLgr}
++ ", " + $F{nro}
++ " - " + $F{xBairro}
++ " - " + $F{xMun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="30" width="286" height="10" uuid="388fa089-5bd5-40e5-98a8-b314039a2d7c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CNPJ: " + $F{CNPJ}.substring(0,2) + "." +
+$F{CNPJ}.substring(2,5) + "." + $F{CNPJ}.substring(5,8) + "/" +
+$F{CNPJ}.substring(8,12) + "-" + $F{CNPJ}.substring(12,14)
++ " - IE: " + $F{IE}
++ " - IM: " + $F{IM}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="40" width="286" height="1" uuid="da2b4f69-8b29-42a4-9b1d-c01c3e946dac"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="41" width="286" height="20" uuid="e71a1efa-b368-49c5-a638-ef6d37c457b6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Extrato No " + $F{nCFe} +
+"\nCUPOM FISCAL ELETRÔNICO - SAT"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="61" width="286" height="10" uuid="6ed80a17-8587-4601-a5a3-41f9c0677b3f"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CPF/CNPJ do Consumidor: " + ($F{CPF} != null ? $F{CPF} : "")]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="70" width="286" height="1" uuid="25ef40bb-8deb-4ae8-ac80-d9cbc6a44a02"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="12" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="286" height="10" uuid="33ec2538-78cd-4c9b-8e6e-5961dcd7daf3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[#  |  COD  |  DESC  |  QTD  |  UN  |  VL UNIT R$  |  (VL TR R$)*  |  VL ITEM R$]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="10" width="286" height="1" uuid="5eb54958-c192-4e82-83ba-1baf8531f0a9"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement positionType="Float" x="31" y="0" width="95" height="10" uuid="7ff768ff-1c19-41d8-83b3-b49e24f86b60"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cProd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="126" y="0" width="160" height="10" uuid="a155702d-e421-438f-b682-06cbf4765fef"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{xProd}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###0.000;-###0.000">
+				<reportElement positionType="Float" x="0" y="10" width="47" height="10" uuid="97a5f8e0-d503-48a4-8162-c745ea437065"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Double.valueOf($F{qCom})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="47" y="10" width="20" height="10" uuid="766a5ed4-c4ae-42f9-a7b4-f81a8a801f19"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="false"/>
+					<paragraph leftIndent="2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uCom}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement positionType="Float" x="67" y="10" width="65" height="10" uuid="6e8b4fac-9597-45b0-aaa0-f7987757df46"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Double.valueOf($F{vUnCom})]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement positionType="Float" x="197" y="10" width="89" height="10" uuid="ff4f8825-8e08-43cf-abd7-685a18281c6f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Double.valueOf($F{vProd})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="0" width="31" height="10" uuid="ab36daed-39d6-4f2e-b532-d64a55eb71ad"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nItem}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement positionType="Float" x="132" y="10" width="65" height="10" uuid="de3f0ab7-c86d-4696-b311-cdda74a88588"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Double.valueOf($F{vItem12741})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="300" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="1" width="184" height="10" uuid="88fc0024-b103-49b4-9c0e-2c4c5ca1631a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VALOR TOTAL R$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="11" width="184" height="10" uuid="e5247c5a-3b97-4d3b-bbe1-fc58882e4244"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FORMA DE PAGAMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="11" width="102" height="10" uuid="01c9d871-04c7-4dda-b13b-cd9578ee0043"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VALOR PAGO]]></text>
+			</staticText>
+			<textField pattern="#,##0.00;-#,##0.00">
+				<reportElement x="184" y="0" width="102" height="10" uuid="31931ce0-d3ab-46ce-a739-654c9b83d06d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[Double.valueOf($F{vCFe})]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="0" y="21" width="286" height="10" uuid="89963771-0fb4-49e7-a298-e816ac96915a"/>
+				<subreportParameter name="XML_DATA_DOCUMENT">
+					<subreportParameterExpression><![CDATA[$P{XML_DATA_DOCUMENT}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "extratoSAT_pagamentos.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement positionType="Float" x="0" y="31" width="286" height="1" uuid="ce54d3d3-5414-4b7d-a60a-c678b21ecb31"/>
+			</line>
+			<image scaleImage="Clip" hAlign="Center" vAlign="Middle" isUsingCache="true">
+				<reportElement positionType="Float" x="72" y="113" width="125" height="125" uuid="4e997782-6754-4e18-b4c7-6bf75a211d00"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA[$P{QR_CODE}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement positionType="Float" x="0" y="32" width="286" height="20" uuid="6e40cbdc-d1f5-423e-b08d-39c188409459"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{infCpl}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="0" y="52" width="286" height="1" uuid="7de489fd-dd34-488e-9b90-dc9bbbd28d87"/>
+			</line>
+			<textField>
+				<reportElement positionType="Float" x="0" y="53" width="286" height="10" uuid="61e57ee4-cd0a-431f-9fda-f387da37324a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["SAT NR. " + $F{nserieSAT}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="Float" x="0" y="238" width="286" height="1" uuid="eab09488-af2f-437f-a945-c2d57df120ef"/>
+			</line>
+			<line>
+				<reportElement positionType="Float" x="0" y="0" width="286" height="1" uuid="d84a3bdf-2c5f-4114-9d24-4e3d326199fc"/>
+			</line>
+			<textField>
+				<reportElement positionType="Float" x="0" y="63" width="286" height="10" uuid="6022e66d-f6b0-4667-9b3b-0e3e8591b772"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yyyy").format(new SimpleDateFormat("yyyyMMdd").parse($F{dEmi}))
++ " - " +
+new SimpleDateFormat("HH:mm:ss").format(new SimpleDateFormat("HHmmss").parse($F{hEmi}))]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="73" width="286" height="10" uuid="2814a094-2cc4-4c51-939d-5887f047cfa5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Courier New" size="6" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Id}.substring(3, 7) + "  " +
+$F{Id}.substring(7, 11) + "  " +
+$F{Id}.substring(11, 15) + "  " +
+$F{Id}.substring(15, 19) + "  " +
+$F{Id}.substring(19, 23) + "  " +
+$F{Id}.substring(23, 27) + "  " +
+$F{Id}.substring(27, 31) + "  " +
+$F{Id}.substring(31, 35) + "  " +
+$F{Id}.substring(35, 39) + "  " +
+$F{Id}.substring(39, 43) + "  " +
+$F{Id}.substring(43)]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="0" y="83" width="286" height="30" uuid="189e9263-fc5c-4f58-9088-077f8623e32b"/>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128C" drawText="false" checksumRequired="false">
+					<jr:codeExpression><![CDATA[$F{Id}.substring(3);]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+		</band>
+	</columnFooter>
+</jasperReport>
